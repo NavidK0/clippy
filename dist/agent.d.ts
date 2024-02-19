@@ -26,8 +26,8 @@ export default class Agent {
     private onMouseUp?;
     constructor(options: AgentOptions);
     gestureAt(x: number, y: number): boolean;
-    hide(fast: boolean, callback?: () => void): void;
-    moveTo(x: number | string, y: number | string, duration: number): void;
+    hide(fast?: boolean, callback?: () => void): void;
+    moveTo(x: number | string, y: number | string, duration?: number): void;
     play(animation: any, timeout?: number, onComplete?: Function): boolean;
     show(fast?: boolean): boolean | undefined;
     speak(text: string, hold?: boolean): void;

@@ -10,7 +10,6 @@ import fs, { readdirSync } from 'fs';
 import path, { dirname } from 'path';
 import styles from 'rollup-plugin-styles';
 import { fileURLToPath } from 'url';
-import copy from 'rollup-plugin-copy';
 
 const require = createRequire(import.meta.url);
 

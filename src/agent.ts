@@ -113,7 +113,7 @@ export default class Agent {
     return this.play(animation);
   }
 
-  public hide(fast: boolean, callback?: () => void) {
+  public hide(fast: boolean = true, callback?: () => void) {
     this.isHidden = true;
     const el = this.$element;
 
@@ -136,10 +136,11 @@ export default class Agent {
     });
   }
 
-  public moveTo(x: number | string, y: number | string, duration: number) {
+  public moveTo(x: number | string, y: number | string, duration?: number) {
     const dir = this.getDirection(x, y);
     const anim = 'Move' + dir;
-    if (duration === undefined) duration = 1000;
+
+    duration = duration !== undefined ? duration : 1000;
 
     this.addToQueue((complete: (this: HTMLElement) => void) => {
       // the simple case
@@ -150,6 +151,8 @@ export default class Agent {
         complete.call(this.$element[0]);
         return;
       }
+
+      duration = duration !== undefined ? duration : 1000;
 
       // no animations
       if (!this.hasAnimation(anim)) {
@@ -162,6 +165,8 @@ export default class Agent {
         if (state === Animator.States.EXITED) {
           complete.call(this.$element[0]);
         }
+
+        duration = duration !== undefined ? duration : 1000;
 
         // if waiting,
         if (state === Animator.States.WAITING) {
