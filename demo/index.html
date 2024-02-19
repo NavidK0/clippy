@@ -1,0 +1,30 @@
+<html lang="">
+  <head>
+    <title>Clippy Demo</title>
+    <style>
+      html {
+        background: url('http://wallpapercave.com/wp/7VNksl0.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      #next-agent {
+        font-size: 1.5em;
+      }
+
+      .clippy-root {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="next-agent">Random agent</button>
+    <div class="clippy-root"></div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.slim.min.js"></script>
+    <script src="../dist/index.js" type="module"></script>
+    <script src="./demo.js" type="module"></script>
+  </body>
+</html>
