@@ -4,12 +4,17 @@
   height: 100%;
   top: 0;
   left: 0;
+
+  pointer-events: none;
+  z-index: 1000;
 }
 
 .clippy, .clippy-balloon {
   position: fixed;
   z-index: 1000;
   cursor: pointer;
+
+  pointer-events: auto;
 }
 
 .clippy-balloon {
@@ -18,6 +23,8 @@
   padding: 8px;
   border: 1px solid black;
   border-radius: 5px;
+
+  pointer-events: auto;
 }
 
 .clippy-content {
@@ -25,6 +32,8 @@
   min-width: 120px;
   font-family: "Microsoft Sans", sans-serif;
   font-size: 10pt;
+
+  pointer-events: auto;
 }
 
 .clippy-tip {
@@ -32,6 +41,8 @@
   height: 16px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAMAAAAlvKiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF///MAAAA////52QwgAAAAAN0Uk5T//8A18oNQQAAAGxJREFUeNqs0kEOwCAIRFHn3//QTUU6xMyyxii+jQosrTPkyPEM6IN3FtzIRk1U4dFeKWQiH6pRRowMVKEmvronEynkwj0uZJgR22+YLopPSo9P34wJSamLSU7lSIWLJU7NkNomNlhqxUeAAQC+TQLZyEuJBwAAAABJRU5ErkJggg==) no-repeat;
   position: absolute;
+
+  pointer-events: auto;
 }
 
 .clippy-top-left .clippy-tip {

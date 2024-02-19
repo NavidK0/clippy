@@ -15,7 +15,6 @@ function nextAgent() {
     // enableSounds: false,
 
     onSuccess: (agent) => {
-      window[agentName] = agent;
       agent.show(false);
       agent.moveTo(500, 500);
 

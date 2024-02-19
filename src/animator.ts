@@ -175,7 +175,18 @@ export default class Animator {
     if (!s) return;
 
     const audio = this.sounds[s];
-    if (audio) audio.play();
+
+    if (audio) {
+      audio.play().catch((e) => {
+        if (e instanceof DOMException) {
+          // Chrome doesn't allow playing sound from a non-user action
+          // so we catch that exception and just don't do it.
+          return;
+        }
+
+        console.error(e);
+      });
+    }
   }
 
   private isAtLastFrame() {

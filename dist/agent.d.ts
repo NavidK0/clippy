@@ -25,6 +25,8 @@ export default class Agent {
     private onMouseMoved?;
     private onMouseUp?;
     constructor(options: AgentOptions);
+    width(): number;
+    height(): number;
     gestureAt(x: number, y: number): boolean;
     hide(fast?: boolean, callback?: () => void): void;
     moveTo(x: number | string, y: number | string, duration?: number): void;

@@ -104,6 +104,14 @@ export default class Agent {
     this.setupEvents();
   }
 
+  public width() {
+    return this.$element.width()!;
+  }
+
+  public height() {
+    return this.$element.height()!;
+  }
+
   public gestureAt(x: number, y: number) {
     const d = this.getDirection(x, y);
     const gAnim = 'Gesture' + d;
