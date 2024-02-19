@@ -18,6 +18,9 @@
     "lint": "yarn eslint . --cache --cache-location node_modules/.cache/eslint",
     "lint:fix": "yarn lint --fix"
   },
+  "repository": {
+    "url": "https://github.com/NavidK0/clippy"
+  },
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-buble": "1.0.3",

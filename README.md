@@ -1,33 +1,32 @@
 # Clippy
 
-> Add Clippy or his friends to any website for instant nostalgia.
-
-## Demos
-
-Please be patient for first load. It may take some time as agents are loaded one by one.
-
-- [Simple JSFiddle](https://jsfiddle.net/lizozomi/n5yz3jeb/23/)
+> Fork of a fork of a fork of a fork of the original clippy.js by https://www.smore.com/
 
 ![clippy-agents](https://user-images.githubusercontent.com/3016806/223058578-e4123bc3-0f4b-4913-a15d-d04e8be04525.png)
 
 ## Usage
 
-### Demo
-
-Run `npm run demo` to view the agent demo page.
-
 ### NPM / Webpack
 
-```shell
-npm install clippyts
-```
-
 ```ts
-import clippy from "clippyts"
+import clippy from "clippy"
 
-clippy.load("Merlin", (agent: Agent) => {
-  // Do anything with the loaded agent
-  agent.show();
+clippy.load({
+  name: agentName,
+
+  // allowDrag: false,
+  // allowDoubleClick: false,
+  // enableSounds: false,
+
+  onSuccess: (agent) => {
+    window[agentName] = agent;
+
+    // Do something with the agent
+    agent.show();
+
+    // Move it instantly to start it from somewhere
+    agent.moveTo(100, 100, 0);
+  },
 });
 ```
 
