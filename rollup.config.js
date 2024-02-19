@@ -43,8 +43,6 @@ const agentInputs = getDirectories(agentDir)
     return { ...acc, ...cur };
   }, {});
 
-console.log(agentInputs);
-
 export default [
   {
     strictDeprecations: true,
@@ -66,16 +64,6 @@ export default [
       }),
       commonjs(),
       terser(),
-      copy({
-        targets: [
-          { src: 'src/clippy.css', dest: 'dist' },
-          {
-            src: ['src/**/*.mp3', 'src/**/*.ogg'],
-            dest: 'dist',
-          },
-        ],
-        flatten: false,
-      }),
     ],
     output: [
       {
