@@ -31,7 +31,7 @@ function nextAgent() {
         agent.animate();
       };
 
-      $('.clippy-root').on('click', () => speak());
+      document.querySelector('.clippy-root').addEventListener('click', () => speak());
       speak();
 
       // Animate randomly
@@ -46,7 +46,7 @@ function nextAgent() {
 }
 
 function destroy() {
-  $('.clippy-root').empty();
+  document.querySelector('.clippy-root').innerHTML = '';
 }
 
 window.onload = () => {
