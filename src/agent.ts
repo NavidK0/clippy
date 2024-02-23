@@ -196,7 +196,7 @@ export default class Agent {
     this.addToQueue((complete: Function) => {
       let completed = false;
       // Handle callback
-      const callback = function (name: string, state: number) {
+      const callback = (name: string, state: number) => {
         if (state === Animator.States.EXITED) {
           completed = true;
           if (onComplete) onComplete();

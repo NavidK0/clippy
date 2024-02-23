@@ -15,8 +15,9 @@ function nextAgent() {
     // enableSounds: false,
 
     onSuccess: (agent) => {
+      agent.moveTo('90%', '90%');
       agent.show(false);
-      agent.moveTo(500, 500);
+      agent.play('Greeting');
 
       // Speak on click and start
       const speak = () => {
