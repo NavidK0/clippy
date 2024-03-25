@@ -36,6 +36,7 @@ export interface LoadOptions {
     rootClass?: string;
     allowDrag?: boolean;
     allowDoubleClick?: boolean;
+    enableSounds?: boolean;
     onSuccess?: (agent: Agent) => void;
     onFail?: (error: any) => void;
 }

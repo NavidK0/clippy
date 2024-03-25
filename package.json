@@ -1,6 +1,6 @@
 {
   "name": "@navidk0/clippy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "clippy.js but with TypeScript",
   "packageManager": "yarn@4.1.0",
   "type": "module",

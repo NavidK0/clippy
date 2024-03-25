@@ -12,8 +12,8 @@ function nextAgent() {
 
     // allowDrag: false,
     // allowDoubleClick: false,
-    // enableSounds: false,
-
+    enableSounds: true,
+    
     onSuccess: (agent) => {
       agent.moveTo('90%', '90%');
       agent.show(false);

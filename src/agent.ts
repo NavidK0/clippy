@@ -22,7 +22,7 @@ export function load(options: LoadOptions) {
     throw new Error('You must specify an agent to load.');
   }
 
-  // Wrapper to the success callback
+  // Wrapper to the success callbacks
   agents[name]()
     .then((agentConfig: AgentWrapper) => {
       const a = new Agent({
@@ -30,6 +30,7 @@ export function load(options: LoadOptions) {
         rootClass: options?.rootClass,
         allowDrag: options?.allowDrag,
         allowDoubleClick: options?.allowDoubleClick,
+        enableSounds: options?.enableSounds,
       });
 
       if (onSuccess) onSuccess(a);
@@ -79,7 +80,7 @@ export default class Agent {
 
     const agentSounds: string[] = [];
 
-    this.enableSounds = options.enableSounds !== undefined ? options.enableSounds : this.enableSounds;
+    this.enableSounds = options.enableSounds !== undefined ? options.enableSounds : false;
 
     if (this.enableSounds) {
       const audio = document.createElement('audio');
